@@ -1920,7 +1920,7 @@ if [ -z "$work_dir_malwarepatrol" ] ; then
 else
   shopt -s extglob; work_dir_malwarepatrol="${work_dir_malwarepatrol%%+(/)}"
 fi
-if [ -z "$work_dir_urlhaust" ] ; then
+if [ -z "$work_dir_urlhaus" ] ; then
   work_dir_urlhaus="$(echo "${work_dir}/${urlhaus_dir}" | $sed_bin 's:/*$::')"
 else
   shopt -s extglob; work_dir_urlhaus="${work_dir_urlhaus%%+(/)}"
@@ -2763,6 +2763,7 @@ xshok_mkdir_ownership "$work_dir_sanesecurity"
 xshok_mkdir_ownership "$work_dir_securiteinfo"
 xshok_mkdir_ownership "$work_dir_work_configs"
 xshok_mkdir_ownership "$work_dir_yararulesproject"
+xshok_mkdir_ownership "$work_dir_urlhaus"
 
 # Set secured access permissions to the GPG directory
 perms chmod -f 0700 "${work_dir_gpg}"
